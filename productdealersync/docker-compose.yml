@@ -16,6 +16,8 @@ services:
         - DOMARINEPRODUCTAPI__DEALERID=EDIT_DEALER_API_KEY
         - DOMARINEPRODUCTAPI__APIKEY=marine
         - DOMARINEPRODUCTAPI__APISECRET=D0h0m3*mar1ne
+        - SMLCENTERAPI__URI=http://192.168.2.213:8080/smlmarinecenter/api/v1/
+        - SMLCENTERAPI__DEALERCODE=100000007
     networks: ["sml_service_network"]
     labels:
         - "traefik.http.routers.productsync.rule=(PathPrefix(`/productsyncdashboard`) || PathPrefix(`/productsync`))"
